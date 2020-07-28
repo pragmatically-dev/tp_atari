@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8CC3043-3808-485E-9CE9-69DBF13016BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tp_Atari_5to_P</RootNamespace>
+    <AssemblyName>Tp_Atari_5to_P</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Sqlite, Version=2.2.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.2.2.4\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NDbUnit.Core, Version=1.6.8.36615, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NDbUnit.Core.1.6.8.0\lib\Net35\NDbUnit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NDbUnit.SqlLite, Version=1.6.8.36615, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NDbUnit.SqlLite.1.6.8.0\lib\Net35\NDbUnit.SqlLite.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.1.12.351, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.12\lib\net45\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\Instrucciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Instrucciones.Designer.cs">
+      <DependentUpon>Instrucciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Juego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Juego.Designer.cs">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Menu_at.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Menu_at.Designer.cs">
+      <DependentUpon>Menu_at.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Game\PuntajeDB.cs" />
+    <Compile Include="Game\Puntuaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Puntuaciones.Designer.cs">
+      <DependentUpon>Puntuaciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Game\Instrucciones.resx">
+      <DependentUpon>Instrucciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Juego.resx">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Menu_at.resx">
+      <DependentUpon>Menu_at.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Game\Puntuaciones.resx">
+      <DependentUpon>Puntuaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Game\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gameover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gameover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cPP2z3w.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
