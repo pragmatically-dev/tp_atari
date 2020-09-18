@@ -20,7 +20,7 @@ namespace Tp_Atari_5to_P
         protected bool left=false, right=false;//para e movimiento de raqueta
         protected bool arriba, izquierda;//para movimiento de la pelota
         protected int speedR=300;
-        protected int speedP = 15;
+        protected int speedP = 10;
         protected int Puntos;
         protected int count;
         private PuntajeDB PuntajeDB = new PuntajeDB();//Manejo de la db
@@ -71,15 +71,11 @@ namespace Tp_Atari_5to_P
                         //Beep();
                         Puntos += 1;
                         this.Text = "Puntaje: " + Puntos;
-                        speedP =17;
                         arriba = true;
                         Rbloque.Play();
                     }
                 }
             }
-            //if (Pelota.Top < -100) {
-            //    arriba = false;
-            //}
         }
         public Juego()
         {

@@ -50,7 +50,7 @@ namespace Tp_Atari_5to_P
 
         private void AutoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ramiro Ahumada, Santiago Nieva, Alan Quinteros, Lucas Quint","Creadores");
+            MessageBox.Show("Santiago Nieva - Pragmatically-dev","Creadores");
         }
     }
 }
